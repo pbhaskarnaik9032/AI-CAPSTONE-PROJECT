@@ -1,0 +1,87 @@
+title,price_gbp,price_inr,star_rating,in_stock,category
+It's Only the Himalayas,45.17,5794.41,2,True,Travel
+Full Moon over Noah’s Ark: An Odyssey to Mount Ararat and Beyond,49.43,6340.88,4,True,Travel
+See America: A Celebration of Our National Parks & Treasured Sites,48.87,6269.04,3,True,Travel
+Vagabonding: An Uncommon Guide to the Art of Long-Term World Travel,36.94,4738.66,2,True,Travel
+Under the Tuscan Sun,37.33,4788.69,3,True,Travel
+A Summer In Europe,44.34,5687.94,2,True,Travel
+The Great Railway Bazaar,30.54,3917.67,1,True,Travel
+A Year in Provence (Provence #1),56.88,7296.57,4,True,Travel
+The Road to Little Dribbling: Adventures of an American in Britain (Notes From a Small Island #2),23.21,2977.38,1,True,Travel
+Neither Here nor There: Travels in Europe,38.95,4996.51,3,True,Travel
+"1,000 Places to See Before You Die",26.08,3345.54,5,True,Travel
+Sharp Objects,47.82,6134.35,4,True,Mystery
+"In a Dark, Dark Wood",19.63,2518.14,1,True,Mystery
+The Past Never Ends,56.5,7247.82,4,True,Mystery
+A Murder in Time,16.64,2134.58,1,True,Mystery
+The Murder of Roger Ackroyd (Hercule Poirot #4),44.1,5657.15,4,True,Mystery
+The Last Mile (Amos Decker #2),54.21,6954.06,2,True,Mystery
+That Darkness (Gardiner and Renner #1),13.92,1785.66,1,True,Mystery
+Tastes Like Fear (DI Marnie Rome #3),10.69,1371.31,1,True,Mystery
+A Time of Torment (Charlie Parker #14),48.35,6202.34,5,True,Mystery
+A Study in Scarlet (Sherlock Holmes #1),16.73,2146.12,2,True,Mystery
+Poisonous (Max Revere Novels #3),26.8,3437.9,3,True,Mystery
+Murder at the 42nd Street Library (Raymond Ambler #1),54.36,6973.3,4,True,Mystery
+Most Wanted,35.28,4525.72,3,True,Mystery
+Hide Away (Eve Duncan #20),11.84,1518.84,1,True,Mystery
+Boar Island (Anna Pigeon #19),59.48,7630.09,3,True,Mystery
+The Widow,27.26,3496.91,2,True,Mystery
+Playing with Fire,13.71,1758.72,3,True,Mystery
+What Happened on Beale Street (Secrets of the South Mysteries #2),25.37,3254.46,5,True,Mystery
+The Bachelor Girl's Guide to Murder (Herringford and Watts Mysteries #1),52.3,6709.04,5,True,Mystery
+Delivering the Truth (Quaker Midwife Mystery #1),20.89,2679.77,4,True,Mystery
+Mesaerion: The Best Science Fiction Stories 1800-1849,37.59,4822.05,1,True,Science Fiction
+Join,35.67,4575.75,5,True,Science Fiction
+"William Shakespeare's Star Wars: Verily, A New Hope (William Shakespeare's Star Wars #4)",43.3,5554.52,4,True,Science Fiction
+The Project,10.65,1366.18,1,True,Science Fiction
+Soft Apocalypse,26.12,3350.67,2,True,Science Fiction
+Sleeping Giants (Themis Files #1),48.74,6252.37,1,True,Science Fiction
+Arena,21.36,2740.06,4,True,Science Fiction
+Foundation (Foundation (Publication Order) #1),32.42,4158.84,1,True,Science Fiction
+The Restaurant at the End of the Universe (Hitchhiker's Guide to the Galaxy #2),10.92,1400.82,1,True,Science Fiction
+Ready Player One,19.07,2446.3,4,True,Science Fiction
+"Life, the Universe and Everything (Hitchhiker's Guide to the Galaxy #3)",33.26,4266.59,2,True,Science Fiction
+Dune (Dune #1),54.86,7037.44,1,True,Science Fiction
+Do Androids Dream of Electric Sheep? (Blade Runner #1),51.48,6603.85,1,True,Science Fiction
+Three Wishes (River of Time: California #1),44.18,5667.41,2,True,Science Fiction
+The Last Girl (The Dominion Trilogy #1),36.26,4651.43,2,True,Science Fiction
+Having the Barbarian's Baby (Ice Planet Barbarians #7.5),34.96,4484.67,4,True,Science Fiction
+The Secret Garden,15.08,1934.46,4,True,Classics
+The Metamorphosis,28.58,3666.24,1,True,Classics
+The Pilgrim's Progress,50.26,6447.35,2,True,Classics
+The Hound of the Baskervilles (Sherlock Holmes #5),14.82,1901.11,2,True,Classics
+Little Women (Little Women #1),28.07,3600.82,4,True,Classics
+Gone with the Wind,32.49,4167.82,3,True,Classics
+Candide,58.63,7521.06,3,True,Classics
+Animal Farm,57.22,7340.18,3,True,Classics
+Wuthering Heights,17.73,2274.4,3,True,Classics
+The Picture of Dorian Gray,29.7,3809.92,2,True,Classics
+The Complete Stories and Poems (The Works of Edgar Allan Poe [Cameo Edition]),26.78,3435.34,4,True,Classics
+Beowulf,38.35,4919.54,2,True,Classics
+And Then There Were None,35.01,4491.08,2,True,Classics
+The Story of Hong Gildong,43.19,5540.41,4,True,Classics
+The Little Prince,45.42,5826.48,2,True,Classics
+Sense and Sensibility,37.46,4805.37,1,True,Classics
+Of Mice and Men,47.11,6043.27,2,True,Classics
+Emma,32.93,4224.26,2,True,Classics
+Alice in Wonderland (Alice's Adventures in Wonderland #1),55.53,7123.39,1,True,Classics
+Tipping the Velvet,53.74,6893.77,1,True,Historical Fiction
+Forever and Forever: The Courtship of Henry Longfellow and Fanny Appleton,29.69,3808.63,3,True,Historical Fiction
+A Flight of Arrows (The Pathfinders #2),55.53,7123.39,5,True,Historical Fiction
+The House by the Lake,36.95,4739.95,1,True,Historical Fiction
+Mrs. Houdini,30.25,3880.47,5,True,Historical Fiction
+The Marriage of Opposites,28.08,3602.1,4,True,Historical Fiction
+Glory over Everything: Beyond The Kitchen House,45.84,5880.36,3,True,Historical Fiction
+"Love, Lies and Spies",20.55,2636.15,2,True,Historical Fiction
+A Paris Apartment,39.01,5004.2,4,True,Historical Fiction
+Lilac Girls,17.28,2216.68,2,True,Historical Fiction
+The Constant Princess (The Tudor Court #1),16.62,2132.01,3,True,Historical Fiction
+The Invention of Wings,37.34,4789.98,1,True,Historical Fiction
+World Without End (The Pillars of the Earth #2),32.97,4229.39,4,True,Historical Fiction
+The Passion of Dolssa,28.32,3632.89,5,True,Historical Fiction
+Girl With a Pearl Earring,26.77,3434.06,1,True,Historical Fiction
+Voyager (Outlander #3),21.07,2702.86,5,True,Historical Fiction
+The Red Tent,35.66,4574.46,5,True,Historical Fiction
+The Last Painting of Sara de Vos,55.55,7125.95,2,True,Historical Fiction
+The Guernsey Literary and Potato Peel Pie Society,49.53,6353.71,1,True,Historical Fiction
+Girl in the Blue Coat,46.83,6007.35,2,True,Historical Fiction
