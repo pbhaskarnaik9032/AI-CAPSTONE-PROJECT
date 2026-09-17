@@ -1,6 +1,6 @@
 # Module 3 - GenAI Support Assistant
 
-A grounded Zepto policy support assistant using RAG, ChromaDB, LangGraph, Pydantic, and FastAPI.
+A grounded Zepto policy support assistant using RAG, ChromaDB, LangGraph, Pydantic, Sentence Transformers, and FastAPI.
 
 ## Architecture
 
@@ -9,11 +9,13 @@ The application follows this pipeline:
 ```text
 User Question
      ↓
-Document / Query Processing
+Document Loading
+     ↓
+Text Chunking
      ↓
 all-MiniLM-L6-v2 Embeddings
      ↓
-ChromaDB
+Persistent ChromaDB
      ↓
 LangGraph classify_intent
      ↓
@@ -38,13 +40,20 @@ FastAPI POST /ask
 
 The eight Zepto policy documents are stored in the `docs/` folder.
 
-`main.py` loads all `doc_*.txt` files and prepares them for embedding.
+`main.py` loads all `doc_*.txt` files, normalizes their text, and splits each document into overlapping chunks before creating embeddings.
+
+The current chunking configuration is:
+
+- Chunk size: 400 characters
+- Chunk overlap: 80 characters
+
+Each chunk receives a unique ChromaDB ID such as `doc_01_chunk_1` and stores metadata containing the original document ID and chunk number.
 
 ## Embedding
 
 The application uses the `all-MiniLM-L6-v2` Sentence Transformer model.
 
-The document embeddings are stored in a persistent ChromaDB collection named:
+The chunk embeddings are stored in a persistent ChromaDB collection named:
 
 `zepto_policies`
 
@@ -54,7 +63,7 @@ Cosine similarity is used for retrieval.
 
 The `retrieve_and_answer` LangGraph node embeds the user query and retrieves the top 3 most similar chunks from ChromaDB.
 
-The retrieved document IDs are returned in the `sources` field.
+The original document IDs are returned in the `sources` field, while the internal chunk IDs remain in the vector store metadata.
 
 ## Generation
 
@@ -114,6 +123,8 @@ The response contains:
 - `sources`
 - `confidence`
 
+The root endpoint also reports the number of loaded source documents, indexed chunks, and whether mock mode is enabled.
+
 ## Example 1 - Policy Question
 
 ### Request
@@ -124,17 +135,17 @@ curl -X POST "http://127.0.0.1:7860/ask" \
 -d '{"query":"How long does delivery take?"}'
 ```
 
-### Response
+### Example Response
 
 ```json
 {
-  "answer": "Based on the retrieved context: Zepto delivers grocery and household essentials to serviceable pin codes within 10 to 30 minutes of order confirmation, depending on the customer's delivery zone and current order volume. Standard del",
+  "answer": "Based on the retrieved context: Zepto delivers grocery and household essentials to serviceable pin codes within 10 to 30 minutes of order confirmation, depending on the customer's delivery zone and current order volume...",
   "sources": ["doc_01", "doc_02", "doc_04"],
   "confidence": 1.0
 }
 ```
 
-This query follows the policy retrieval path.
+This query follows the policy retrieval path and uses the top retrieved chunk to generate the mock answer.
 
 ## Example 2 - General Question
 
@@ -156,13 +167,15 @@ curl -X POST "http://127.0.0.1:7860/ask" \
 }
 ```
 
-This query follows the direct-answer path.
+This query follows the direct-answer path because it is not classified as a Zepto policy question in mock mode.
 
 ## Docker
 
 The application includes a `Dockerfile` for local execution.
 
 ### Build the Docker image
+
+Run these commands from the `support_assistant/` directory:
 
 ```bash
 docker build -t zepto-support .
@@ -171,7 +184,7 @@ docker build -t zepto-support .
 ### Run the container
 
 ```bash
-docker run -p 7860:7860 zepto-support
+docker run --rm -p 7860:7860 zepto-support
 ```
 
 The FastAPI application will be available at:
